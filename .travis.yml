@@ -1,7 +1,14 @@
 language: android
 dist: trusty
+before_install:
+  - yes | sdkmanager "platforms;android-26"
 android:
   components:
     - buid-tools-26.0.2
     - android-26
     - extra
+
+    # system image to run emulator for testing
+    - sys-img-x86-android-26
+  licenses:
+    - 'android-sdk-license-.+'
